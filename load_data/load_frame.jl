@@ -8,7 +8,7 @@ function load_frame(frame::Int64)
     elseif frame >=67000
         airfoil = "NLR-7301";
     end
-    name = Printf.@sprintf "frame_%d.mat" frame    
+    name = Printf.@sprintf "./example/frame_%d.mat" frame    
     vars = MAT.matread(name)
 
     M = vars["M"]
