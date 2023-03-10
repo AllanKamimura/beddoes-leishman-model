@@ -27,9 +27,9 @@ println("Load BL-params")
 println(df)
 
 include("./load_data.jl");
-include("./BL_model.jl");
+include("./BL_dxdt.jl");
 include("./BL_RKF45.jl");
 include("./BL_model.jl");
 
-#Plots.default(fmt = :png)
-BL_model(10022, df, false)
+Plots.default(fmt = :png)
+BL_model(10022, df, true)
